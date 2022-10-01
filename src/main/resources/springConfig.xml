@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!--    both is correct-->
+    <bean id="vhc" class="org.example.Car" autowire="byName"/>
+<!--    <bean id="vhc" class="org.example.Car">-->
+<!--        <property name="tyre" ref="tyre"/>-->
+<!--    </bean>-->
+
+
+    <bean id="tyre" class="org.example.Tyre">
+        <constructor-arg value="barez" type="java.lang.String"/>
+        <constructor-arg value="185" type="java.lang.Integer"/>
+    </bean>
+</beans>
